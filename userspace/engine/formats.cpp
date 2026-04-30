@@ -158,7 +158,7 @@ std::string falco_formats::format_event(sinsp_evt *evt,
 			}
 		}
 
-		return event.dump();
+		return event.dump(-1, ' ', false, nlohmann::detail::error_handler_t::replace);
 	}
 
 	// should never get here until we only have OF_NORMAL and OF_JSON
